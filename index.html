@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Buscar CEP</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/styles.css">
+    </head>
+    <body>
+        <section class="buscar__cep">
+            <div class="buscar__cep-content">
+                <h1>digite um cep</h1>
+                <h2>Digite abaixo para consultar um código de Endereçamento postal (CEP do Brasil) </h2>
+                <form method="get" action=".">
+                    <div class="form__group field">
+                        <input type="text" class="form__field" placeholder="Name" name="cep" id="cep" value="" size="10" maxlength="9" required />
+                        <label for="name" class="form__label">Cep</label>
+                    </div>
+                    <button id="buscar">Buscar</button>
+                </form>
+            </div>
+        </section>
+        <section class="exibir__cep">
+            <div class="exibir__cep-content">
+                <div class="exibir__cep-infos">
+                    <h2 id="rua"></h2>
+                    <p>
+                        <span id="bairro"></span><br/>
+                        <span id="cidade"> </span> - <span id="uf"> </span><br/>
+                        <span id="cep2"></span>
+                    </p>
+                </div>
+                <div id="mapa"></div>
+                <button id="limpar">Fazer Outra Busca</button>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js" integrity="sha512-VpQwrlvKqJHKtIvpL8Zv6819FkTJyE1DoVNH0L2RLn8hUPjRjkS/bCYurZs0DX9Ybwu9oHRHdBZR9fESaq8Z8A==" crossorigin="anonymous"></script>
+        <script src="assets/script.js"></script>
+    </body>
+</html>

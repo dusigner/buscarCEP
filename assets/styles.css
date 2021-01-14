@@ -1,0 +1,157 @@
+@font-face {
+    font-family: raleway_black;
+    src: url(fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: metropolis_light;
+    src:    url(fonts/metropolis-light-webfont.woff2) format("woff2"),
+            url(fonts/metropolis-light-webfont.woff) format("woff");
+}
+*:focus {
+    outline: none;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.buscar__cep {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.buscar__cep-content {
+    max-width: 80%;
+}
+.buscar__cep form {
+    width: 100%;
+}
+.buscar__cep form input{
+    width: 100%;
+    font-family: metropolis_light;
+    font-size: 14px;
+    color:#333333;
+    margin: 10px 0;
+    padding: 10px 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #777;
+}
+.exibir__cep {
+    height:auto;
+    background-color: #FF0019;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buscar__cep h1{
+    font-family: raleway_black;
+    color:#FF0019;
+    font-size: 32px;
+    margin: 0;
+}
+.buscar__cep h2 {
+    font-family: metropolis_light;
+    color:#333;
+    font-size: 13px;
+    margin: 0;
+}
+.exibir__cep-infos {
+    height: auto;
+    width: 100%;
+}
+.exibir__cep-content {
+    background-color: white;
+    padding: 40px;
+    display: none;
+    width: 100%;
+}
+#limpar {
+    display: none;
+    margin-top: 20px;
+}
+.exibir__cep-infos h2{
+    font-family: raleway_black;
+    color:#FF0019;
+    font-size: 32px;
+    margin: 0;
+}
+.exibir__cep-infos p{
+    font-family: metropolis_light;
+    color:#777777;
+    font-size: 13px;
+    margin: 0 0 20px 0;
+}
+button {
+    background-color: #FF0019;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    font-family: metropolis_light;
+    font-size: 13px;
+    border-radius: 30px;
+    width: 50%;
+    cursor: pointer;
+}
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.form__group {
+    position: relative;
+    width: 100%;
+}
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-family: metropolis_light;
+    font-size: 13px;
+    cursor: text;
+    top: 20px;
+}
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 13px;
+    font-family: metropolis_light;
+    color: #9b9b9b;
+}
+.form__field:focus {
+    border-width: 1px;
+    border-image: linear-gradient(to right, #FF0019, #FF0019);
+    border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 13px;
+    color: #FF0019;
+}
+@media (max-width: 600px) {
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50%;
+    }
+    .buscar__cep {
+        height: 50vh;
+    }
+    .exibir__cep {
+        padding: 10px;
+    }
+    .exibir__cep-content {
+        padding: 20px;
+    }
+}
